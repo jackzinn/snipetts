@@ -1,2 +1,2 @@
 # snipetts
-Meus Snippets de Javascript
+Meus Snippets
