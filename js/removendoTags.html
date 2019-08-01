@@ -1,14 +1,16 @@
 <script>
 
 function stripHTML() {
+
 	var re= /<\S[^><]*>/g;
+	
 	for (i=0; i < arguments.length; i++) {
-		arguments[i].value=arguments[i].value.replace(re, "");
+		arguments[i].target.value=arguments[i].target.value.replace(re, "");
 	}
+	
 }
 
 </script>
-<form>
-<textarea name="myText"></textarea><br />
-<input type="button" value="Remove tags" onClick="stripHTML(this.form.myText)">
-</form>
+
+<input type="text" name="myText" id="teste" onchange="stripHTML(event)"><br />
+
