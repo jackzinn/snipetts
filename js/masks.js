@@ -14,3 +14,10 @@ function mascaraCpf(valor) {
 function mascaraCnpj(valor) {
     return valor.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g,"\$1.\$2.\$3\/\$4\-\$5");
 }
+function formatReal(intvariavel) {
+    var tmporario = intvariavel + '';
+    tmporario = tmporario.replace(/([0-9]{2})$/g, ",$1");
+    if (tmporario.length > 6)
+        tmporario = tmporario.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+    return tmporario;
+}
